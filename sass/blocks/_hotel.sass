@@ -5,11 +5,12 @@
     display: flex
     align-items: center
     justify-content: space-between
+    margin-bottom: 20px
     &__offer
       margin-left: 14px
       margin-top: 4px 
     &__name
-      margin-top: 4px
+      margin-top: -8px
       margin-bottom: 0
     &__description
       margin: 5px  
@@ -24,7 +25,15 @@
     font-size: 12px
     line-height: 15px  
 .stars
-  flex-basis: 100%      
+  flex-basis: 100%
+
+  &-picture 
+    width: 8px
+    height: 8px
+    margin-right: 0px
+      &::before
+        content:'/'
+        margin-right: -4px       
 .offer
   font-size: 10px
   line-height: 13px
@@ -32,6 +41,7 @@
   border-radius: 3px
   color: $light
   padding: 4px 9px
+  
 .rating
   max-width: 65px
   min-height: 45px
@@ -39,9 +49,13 @@
   color: $light
   background-color: $primary
   border-radius: 4px
+  margin-bottom: 20px
   &__text
     font-size: 8px
     line-height: 10px  
   &__counter
     font-size: 14px
     line-height: 18px
+    &-index
+      font-size: 10px
+      line-height: 13px
