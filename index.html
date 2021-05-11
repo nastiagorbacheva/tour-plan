@@ -7,6 +7,7 @@
       <title>Best Tour Plan - Hotel Booking</title>
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/swiper-bundle.min.css">
       <link rel="stylesheet" href="./css/style.css">
    </head>
    <body>
@@ -74,11 +75,11 @@
                <div class="hotel-info__text">
                   <div class="hotel-wrapper">
                      <div class="stars">
-                        <img class="stars-picture first" src="img/star.svg" alt="star">
-                        <img class="stars-picture" src="img/star.svg" alt="star">
-                        <img class="stars-picture" src="img/star.svg" alt="star">
-                        <img class="stars-picture" src="img/star.svg" alt="star">
-                        <img class="stars-picture" src="img/star.svg" alt="star">
+                        <img class="stars__picture first" src="img/star.svg" alt="star">
+                        <img class="stars__picture" src="img/star.svg" alt="star">
+                        <img class="stars__picture" src="img/star.svg" alt="star">
+                        <img class="stars__picture" src="img/star.svg" alt="star">
+                        <img class="stars__picture" src="img/star.svg" alt="star">
                      </div>
                      <h1 class="hotel-name hotel-info__name">GRAND HILTON HOTEL</h1>
                      <span class="offer hotel-info__offer">Flash offer</span>
@@ -92,8 +93,35 @@
                </div>
                <!-- /.hotel-info__rating -->
             </div>
+            <div class="hotel-grid">
+                  <!-- Slider main container -->
+                  <div class="swiper-container hotel-slider hotel__slider">
+                     <!-- Additional required wrapper -->
+                     <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide hotel-slider__slide">
+                           <img class="hotel-slider__img" src="img/slide.jpg" alt="slide">
+                        </div>
+                        <div class="swiper-slide hotel-slider__slide">
+                           <img class="hotel-slider__img" src="img/slide.jpg" alt="slide">
+                        </div>
+                        <div class="swiper-slide hotel-slider__slide">
+                           <img class="hotel-slider__img" src="img/slide.jpg" alt="slide">
+                        </div>.
+                     </div>
+                     <!-- If we need navigation buttons -->
+                     <button class= "hotel-slider__button hotel-slider__button--prev"></button>
+                     <button class="hotel-slider__button hotel-slider__button--next"></button>
+                  </div>
+                  <!-- /.swiper-container -->
+               
+               <!-- /.slider -->
+            </div>
+            <!-- /.hotel-grid -->
          </div>
          <!-- /.container -->
       </section>
+      <script src="js/swiper-bundle.min.js"></script>
+      <script src="js/main.js"></script>
    </body>
 </html>
