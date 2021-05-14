@@ -7,17 +7,16 @@
       <title>Best Tour Plan - Hotel Booking</title>
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
-      <script src="https://api-maps.yandex.ru/2.1/?apikey=d380664d-5548-4cf0-a83d-4e6b6f8724b1&lang=ru_RU" type="text/javascript">
-      </script>
+      <script src="https://api-maps.yandex.ru/2.1/?apikey=d380664d-5548-4cf0-a83d-4e6b6f8724b1&lang=ru_RU" type="text/javascript"></script>
       <script type="text/javascript">
-    ymaps.ready(init);
-    function init(){
-        var myMap = new ymaps.Map("map", {
-            center: [7.89067469974694, 98.29470384302199],
-            zoom: 17
-        });
-    }
-</script>
+         ymaps.ready(init);
+         function init(){
+            var myMap = new ymaps.Map("map", {
+               center: [7.89067469974694, 98.29470384302199],
+               zoom: 17
+            });
+         }
+      </script>
       <link rel="stylesheet" href="css/swiper-bundle.min.css">
       <link rel="stylesheet" href="./css/style.css">
    </head>
@@ -105,66 +104,63 @@
                <!-- /.hotel-info__rating -->
             </div>
             <div class="hotel-grid">
-                  <!-- Slider main container -->
-                  <div class="swiper-container hotel-slider hotel__slider">
-                     <!-- Additional required wrapper -->
-                     <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide hotel-slider__slide">
-                           <img class="hotel-slider__img" src="img/slide.jpg" alt="slide">
-                        </div>
-                        <div class="swiper-slide hotel-slider__slide">
-                           <img class="hotel-slider__img" src="img/slide.jpg" alt="slide">
-                        </div>
-                        <div class="swiper-slide hotel-slider__slide">
-                           <img class="hotel-slider__img" src="img/slide.jpg" alt="slide">
-                        </div>
+               <!-- Slider main container -->
+               <div class="swiper-container hotel-slider hotel__slider">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                     <!-- Slides -->
+                     <div class="swiper-slide hotel-slider__slide">
+                        <img class="hotel-slider__img" src="img/slide.jpg" alt="slide">
                      </div>
-                     <!-- If we need navigation buttons -->
-                     <button class= "hotel-slider__button hotel-slider__button--prev"></button>
-                     <button class="hotel-slider__button hotel-slider__button--next"></button>
+                     <div class="swiper-slide hotel-slider__slide">
+                        <img class="hotel-slider__img" src="img/slide.jpg" alt="slide">
+                     </div>
+                     <div class="swiper-slide hotel-slider__slide">
+                        <img class="hotel-slider__img" src="img/slide.jpg" alt="slide">
+                     </div>
                   </div>
-                  <!-- /.swiper-container -->
-               
-               <!-- /.slider -->
+                  <!-- If we need navigation buttons -->
+                  <button class= "hotel-slider__button hotel-slider__button--prev"></button>
+                  <button class="hotel-slider__button hotel-slider__button--next"></button>
+               </div>
+               <!-- /.swiper-container -->
                <div class="hotel-right">
                   <div class="booking">
-                  <div class="booking__info">
-                     <div class="booking__price">
-                        <span class="booking__start">price starts as</span>
-                        <strong class="booking__pricetag">$ 8,500</strong>
-                        <span class="booking__per-room">per room / night</span>
-                     </div>
-                     <!-- /.price -->
+                     <div class="booking__info">
+                        <div class="booking__price">
+                           <span class="booking__start">price starts as</span>
+                           <strong class="booking__pricetag">$ 8,500</strong>
+                           <span class="booking__per-room">per room / night</span>
+                        </div>
+                        <!-- /.price -->
                         <div class="booking__room">
                            <div class="booking__text">
                               <img src="img/user.svg" alt="Icon: user" class="booking__icon">
                               <span class="booking__description">2 x Guests</span>
                            </div>
                            <div class="booking__room">
-                           <div class="booking__text">
-                              <img src="img/home.svg" alt="Icon: home" class="booking__icon">
-                              <span class="booking__description">1 x Room</span>
-                           </div>
+                              <div class="booking__text">
+                                 <img src="img/home.svg" alt="Icon: home" class="booking__icon">
+                                 <span class="booking__description">1 x Room</span>
+                              </div>
                            </div>
                         </div>
                         <!-- /.booking__room -->
-                  </div>
-                  <!-- /.booking__info -->
-                  <div class="booking__call-center">
-                     <span class="booking__heading">Quick Booking</span>
-                     <a class="booking__number" href="tel:12100">
+                     </div>
+                     <!-- /.booking__info -->
+                     <div class="booking__call-center">
+                        <span class="booking__heading">Quick Booking</span>
+                        <a class="booking__number" href="tel:12100">
                         <img src="img/phone-call.svg" alt="Icon: phone">
                         <span class="booking__num">12100</span>
-                     </a>
+                        </a>
+                     </div>
+                     <!-- /.booking__call-center -->
+                     <button class="button booking__button">View Other Options</button>
                   </div>
-                  <!-- /.booking__call-center -->
-                  <button class="button booking__button">View Other Options</button>
-               </div>
-               <!-- /.booking -->
-               <div id="map">
-
-               </div>
+                  <!-- /.booking -->
+                  <div id="map">
+                  </div>
                </div>
             </div>
             <!-- /.hotel-grid -->
@@ -177,13 +173,125 @@
                subscribe to our
                <span class="newsletter-title__strong">Newsletter</span>
             </h2>
-               <form action="#" class="subscribe newsletter__subscribe">
-                  <input type="text" class="subscribe__input"
-                     placeholder="Your email address">
-                  <button class="subscribe__button">Send</button>
-               </form>
+            <form action="#" class="subscribe newsletter__subscribe">
+               <input type="text" class="subscribe__input"
+                  placeholder="Your email address">
+               <button class="subscribe__button">Send</button>
+            </form>
          </div>
          <!-- /.newsletter-wrapper -->
+      </section>
+      <section class="reviews">
+         <div class="container">
+            <h2 class="reviews__title">
+               What people think about us
+            </h2>
+
+
+
+            <div class="swiper-container reviews-slider">
+               <div class="swiper-wrapper">
+
+
+
+                  <div class="swiper-slide">
+                     <div class="reviews-slider__item">
+                        <div class="reviews-slider__profile">
+                           <img src="img/reviews-avatar.jpg" alt="Photo: Megan Fox" class="reviews-slider__avatar">
+                           <h3 class="reviews-slider__username">Megan Fox</h3>
+                           <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
+                           <div class="reviews-slider__rating">
+                              <img class="rating-stars__picture first" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                           </div> 
+                           <!-- /.reviews-slider__rating -->
+                           </div>
+                           
+                        
+                        <!-- /.reviews-slider__profile -->
+                        <p class="reviews-slider__text">
+                           It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well. Issue was only that Lift was not in working and we were allotted to 3rd floor and amenities articles were in corner of gallery which were giving bad feeling. Breakfast was good and support of the staff was also very nice. Location is not good as per atmosphere, it is very nearby most of the popular places but self location in a narrow street is not good. Overall it was a good experience and could recommend. 
+                        </p>
+                        </div>
+                     </div>
+
+
+
+                     <!-- /.reviews-slider__item -->
+                  
+                  <!-- /.swiper-slide -->
+                  <div class="swiper-slide">
+                     <div class="reviews-slider__item">
+                        <div class="reviews-slider__profile">
+                           <img src="img/reviews-avatar-2.jpg" alt="Photo: Tom Braun" class="reviews-slider__avatar">
+                           <h3 class="reviews-slider__username">Tom Braun</h3>
+                           <span class="reviews-slider__date">Stayed 23 Jun, 2017</span>
+                           <div class="reviews-slider__rating">
+                              <img class="rating-stars__picture first" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                           </div> 
+                           <!-- /.reviews-slider__rating -->
+                           </div>
+                           
+                        
+                        <!-- /.reviews-slider__profile -->
+                        <p class="reviews-slider__text">
+We selected this hotel based on the reviews and it did not disappoint. It exceeded our expectations! The location is excellent, the building is charming, and the staff went out of their way to make us feel at home. One morning we had an early meeting time for a tour and the staff packed us a to-go breakfast to eat on the tour bus. We also enjoyed a bottle of champagne on their terrace to celebrate our wedding anniversary. Highly recommeded!
+                        </p>
+                        </div>
+                     </div>
+                     <!-- /.reviews-slider__item -->
+                  <!-- /.swiper-slide -->
+                  <div class="swiper-slide">
+                     <div class="reviews-slider__item">
+                        <div class="reviews-slider__profile">
+                           <img src="img/reviews-avatar-3.jpg" alt="Photo: Peter Thompson" class="reviews-slider__avatar">
+                           <h3 class="reviews-slider__username">Peter Thompson</h3>
+                           <span class="reviews-slider__date">Stayed 11 Jan, 2018</span>
+                           <div class="reviews-slider__rating">
+                              <img class="rating-stars__picture first" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                              <img class="rating-stars__picture" src="img/star.svg" alt="star">
+                           </div> 
+                           <!-- /.reviews-slider__rating -->
+                           </div>
+                           
+                        
+                        <!-- /.reviews-slider__profile -->
+                        <p class="reviews-slider__text">
+Our travel agent recommended this hotel as a reasonably priced family owned hotel. It was charming from the front door all the way up the stairs to our hotel room. The large windows opened to the air and a beautiful street sight of casading flowers and cobblestones below. The furniture in the room had old world charm, the hallways were filled with decor from the past and beautiful photographs. The dining area was comfortable, with a wide variety of buffet breakfast items, Americano and Italiano together, and also featured made to order cafes and lattes. Every employee more charming than the next. You won't regret a stay at this lovely hotel.
+                        </p>
+                        </div>
+                     </div>
+                     <!-- /.reviews-slider__item -->
+
+
+
+
+
+
+
+
+
+                  </div>
+            
+               <!-- /.swiper-wrapper -->
+               <button class="reviews-slider__button reviews-slider__button--prev"></button>
+               <button class="reviews-slider__button reviews-slider__button--next"></button>
+            </div>
+               </div>
+            </div>
+            <!-- /.reviews-slider -->
+         </div>
+         <!-- /.container -->
       </section>
       <script src="js/swiper-bundle.min.js"></script>
       <script src="js/main.js"></script>
