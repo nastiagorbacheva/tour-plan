@@ -830,12 +830,12 @@ img {
 }
 
 .newsletter {
+  background-attachment: fixed;
   position: relative;
   padding: 98px 0 87px 0;
   height: 260px;
   background-image: url(../img/newsletter-bg.jpg);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
 
