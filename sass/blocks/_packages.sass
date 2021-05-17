@@ -1,0 +1,214 @@
+
+.grid 
+  display: grid
+  grid-template-areas: "item-1 item-1 item-3" "item-1 item-1 item-3" "item-7 item-8 item-9" "item-7 item-8 item-9" ". . ." 
+  grid-template-rows: repeat(5, 235px)
+  row-gap: 30px
+  column-gap: 30px
+  grid-template-columns: repeat(4, 350px)
+  &-wrapper
+    max-width: 1440px
+    max-height: 1030px 
+    margin-bottom: 70px
+  &-item
+    background-color: $dark
+    color: $light
+    border-radius: 8px
+    position: relative    
+    &__1 
+      grid-area: item-1
+      display: flex
+      flex-direction: row
+      position: relative
+    &__2 
+      grid-area: item-2 
+    &__3
+      grid-area: item-3
+    &__4
+      grid-area: item-4
+      display: none 
+    &__5
+      grid-area: item-5
+      display: none
+    &__6 
+      grid-area: item-6
+      display: none
+    &__7 
+      grid-area: item-7
+    &__8 
+      grid-area: item-8
+    &__9 
+      grid-area: item-9
+    &__10 
+      grid-area: item-10
+      display: none
+    &__11 
+      grid-area: item-11
+      display: none
+    &__12 
+      grid-area: item-12
+      display: none
+.flash__offer
+  background-color: $primary
+  position: absolute
+  top: 30px
+  left: 0
+  padding-top: 3px
+  color: $light
+  width: 60px
+  height: 18px    
+  font-style: normal
+  font-weight: 600
+  font-size: 8px
+  line-height: 10px
+  text-align: center
+  border-radius: 0 2px 2px 0   
+  &--first
+    background-color: $primary
+    position: absolute
+    top: 30px
+    left: 0
+    padding-top: 6px
+    color: $light
+    width: 95px
+    height: 30px    
+    font-style: normal
+    font-weight: 600
+    font-size: 12px
+    line-height: 15px
+    text-align: center
+    border-radius: 0 4px 4px 0       
+.item
+  &-stars
+    &__picture
+      margin-left: -2px
+  &__general
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-top: 54px
+  &__price
+    display: flex
+    flex-direction: column
+    display: block
+    height: 53px
+  &-bottom
+    display: flex
+    justify-content: space-between
+    width: 150px
+    display: block
+    margin-top: -10px
+
+  &__pricetag
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 30px
+    &--first
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 30px
+  &__discount
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 18px
+      text-decoration-line: line-through
+      display: block
+      margin-top: -25px
+      &--first
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 18px
+        text-decoration-line: line-through
+        display: block
+        margin-top: -15px
+        padding-bottom: 5px
+
+
+  &-wrapper
+    width: 203px
+    height: 67px
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    margin-top: 22px
+    &--1
+      margin-top: 45px
+  &__button
+    height: 40px
+    width: 120px
+    background-color: $primary
+    color: $light
+    border: none
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    border-radius: 4px
+    padding: 7px 22px
+    cursor: pointer 
+    margin-top: -10px
+    margin-right: -10px
+    &--first
+      height: 40px
+      width: 120px
+      background-color: $primary
+      color: $light
+      border: none
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 19px
+      border-radius: 4px
+      padding: 7px 22px
+      cursor: pointer 
+      margin-top: 0
+      margin-right: 0
+  &-box
+    padding: 30px 30px 20px 30px
+    &--first
+      max-width: 364px
+      padding: 0 20px 21px 44px
+  &__rating
+    margin-top: 40px
+  &__text
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 22px   
+  &-image--first
+    height: 100%
+    width: 200%
+    border-radius: 8px 0 0 8px
+  &-image--others
+    width: 350px
+    height: 250px
+    border-radius: 8px 8px 0 0
+  &__header
+    margin-top: 0
+    &--first
+      font-style: bold
+      font-size: 18px
+      line-height: 23px
+      margin-top: 4px
+      margin-bottom: 25px
+.packages
+  &__header
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 60px
+
+  
+
+
+
+

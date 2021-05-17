@@ -7,10 +7,20 @@
     &-slider__img
       width: 100%
       height: 100% 
-      object-fit: cover 
+      object-fit: cover
+  .grid
+    grid-template-rows: repeat(4, 250px)
+    grid-template-columns: minmax(350px, 350px)
+    row-gap: 2px
+    column-gap: 2px
+  .packages
+    margin-left: 20px  
   .card
     width: 230px
-    height: 230px   
+    height: 230px
+  .item
+    &-box
+      margin-top: -20px    
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -77,8 +87,28 @@
       margin-top: -10px 
     &__title
       max-width: 200px
-      line-height: 28px              
+      line-height: 28px
+  .grid
+    grid-template-rows: repeat(6, 235px)
+    grid-template-columns: repeat(2, 350px)
+    grid-template-areas: "item-1 item-1" "item-1 item-1" "item-3 item-7" "item-3 item-7" "item-8 item-9" "item-8 item-9"
+  .newsletter
+    margin-top: 450px
+  .item
+    &-box
+      &--first
+        margin-top: -20px                
 @media (max-width: 768px)
+  .grid
+    grid-template-rows: repeat(6, 235px)
+    grid-template-columns: repeat(2, 320px)
+  .packages
+    margin-left: -50px
+    margin-right: 
+  .item
+    &__button   
+      &--first
+        margin-left: -150px    
   .container
     max-width: 576px
     width: 92%
@@ -162,7 +192,37 @@
     width: 49%
     height: 255px        
 @media (max-width: 576px )
-  .hotel
+  .grid
+    grid-template-areas: "item-1" "item-1" "item-2" "item-2" "item-3" "item-3" "item-7" "item-7" "item-8" "item-8" "item-9" "item-9"
+    grid-template-rows: repeat(10, 100%)
+    grid-template-columns: minmax(315px, 565px)
+    grid-column: span 2
+    &-item
+      &__1
+        display: flex
+        flex-direction: column
+  .packages
+    margin-left: -20px
+    &__header
+      margin-top: -70px    
+  .item
+    &-box
+      &--first
+        padding-left: 9px
+    &__text
+      width: 260px
+      margin-bottom: -30px
+    &__header
+      &--first
+        margin-bottom: 5px
+
+
+    &-image
+      &--others
+        width: 100%
+      &--first
+        width: 100%
+        height: 500px
     &__slider
       height: 250px
       margin-bottom: 20px 
@@ -193,8 +253,8 @@
   .menu-button
     margin-right: 15px  
   .newsletter
+    margin-top: 2000px
     padding: 76px 0 83px 0
-    margin-top: -72px
     height: 320px
     &-wrapper
       margin-left: 0
@@ -238,15 +298,41 @@
         margin-top: -45px  
   .card
     width: 100%
+    min-width: 255px
+    height: 255px
+    max-width: 100%
     height: 255px
     margin-right: 12px
     &__title
       line-height: 20px
       margin-bottom: 26px
   .activities
+    &__card 
+      &--1
+        order: 1
+      &--2
+        order: 3
+      &--3
+        order: 2
+      &--4
+        order: 4 
     &__title
       font-size: 18px
       line-height: 23px
       margin-top: -40px
       margin-bottom: 37px  
-    
+      &__1
+        display: flex
+        font-display: row
+        grid-row-start: 1 
+        grid-row-end: 2
+        grid-column-start: 1   
+        grid-column-end: 2
+      &__2 
+        grid-area: item-2
+        display: initial
+      &__5
+        grid-area: item-5
+        display: initial 
+
+
