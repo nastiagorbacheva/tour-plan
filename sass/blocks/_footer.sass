@@ -1,5 +1,6 @@
 .footer
   background-color: $dark
+  // margin-top: -48px
   color: $light
   padding-top: 108px
   padding-bottom: 46px
@@ -80,11 +81,13 @@
     flex-basis: 48%
   &__message
     background-color: #fff
+    height: 131px
     border-radius: 4px
     padding: 18px 23px
     border: none
     flex-basis: 100%
     margin-bottom: 23px
+    resize: none
   &__button
     min-width: 160px
     min-height: 50px
@@ -102,6 +105,34 @@
     font-weight: bold
     font-size: 12px
     line-height: 15px
-    color: $footer-text-color
+    color: #E0E0E0
+    &__info
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: #E0E0E0
+  &-disclaimer
+    display: flex
+    justify-content: flex-end
+    margin-top: 88px
+  &__disclaimer
+    display: flex
+    justify-content: space-between
+    padding: 0
+    list-style-type: none
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    width: 310px
+    &-list
+      margin-left: 4px
+    &-wrapper
+      margin-right: 277px
+      display: flex
+      justify-content: space-between
+      
+
 
 
