@@ -2301,5 +2301,8 @@ img {
     -ms-grid-column: 1;
     grid-column: 1;
   }
+  .footer__disclaimer-wrapper {
+    margin-right: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
