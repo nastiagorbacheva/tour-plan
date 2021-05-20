@@ -102,33 +102,52 @@
       &--first
         margin-top: -20px
   .footer
+    margin-top: -41px
+    &__title
+      &--inline
+        margin-left: -15px  
     &-wrapper
       grid-template-columns: repeat(6, 1fr)
       grid-row-gap: 40px
+      margin-top: -80px
     &__input
-      flex-basis: 100%
+      flex-basis: 48%
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
+      width: 95px
+      height: 120px
+      margin-top: 40px
     &__social
       &-network
         grid-row: 1 / 2
         grid-column: span 4
         align-self: center
+        margin-top: 46px
+        margin-left: -40px
     &__categories
       grid-row: 2 / 3
       grid-column: span 2
     &__legal
       grid-column: span 2
-    &__additional
+      padding-left: 0
+    &-additional
       grid-column: span 2
+      margin-left: -40px
     &__contact
       &-details
         grid-column: span 5
         grid-row: 3
+        margin-top: 21px
+        margin-bottom: 15px
       &-form
         grid-column: span 5
-        grid-row: 4                     
+        grid-row: 4
+        padding-right: 43px
+    &-disclaimer
+      margin-top: 0
+      margin-top: 53px
+      margin-left: -17px    
 @media (max-width: 768px)
   .grid
     grid-template-rows: repeat(6, 235px)
@@ -228,13 +247,17 @@
 @media (max-width: 576px )
   .grid
     grid-template-areas: "item-1" "item-1" "item-2" "item-2" "item-3" "item-3" "item-7" "item-7" "item-8" "item-8" "item-9" "item-9"
-    grid-template-rows: repeat(10, 100%)
-    grid-template-columns: minmax(315px, 565px)
+    grid-template-rows: repeat(8, 250px)
+    grid-template-columns: minmax(315px, 568px)
     grid-column: span 2
+    &-wrapper
+      margin-top: -1000px
+      margin-left: 0
     &-item
       &__1
-        display: flex
-        flex-direction: column
+        display: none
+      &__2
+        display: none  
   .packages
     margin-left: -20px
     &__header
@@ -249,8 +272,6 @@
     &__header
       &--first
         margin-bottom: 5px
-
-
     &-image
       &--others
         width: 100%
@@ -341,6 +362,7 @@
       line-height: 20px
       margin-bottom: 26px
   .activities
+    margin-bottom: 26px
     &__card 
       &--1
         order: 1
@@ -369,8 +391,22 @@
         grid-area: item-5
         display: initial 
   .footer
+    &__button
+      margin-top: 20px
+    &__info
+
+    &__form
+      margin-top: -15px
+    &__title
+      &--inline
+        margin-top: -5px
+        margin-left: 0
+    &-additional
+      margin-left: 0
+      margin-top: -15px
     &__message
-      
+    &__info
+
     &-wrapper
       grid-template-columns: 1fr
     &__logo
@@ -380,23 +416,51 @@
       &-network
         grid-row: 2
         grid-column: 1
+        margin-left: 0
+        margin-top: 0
+        display: flex
+        flex-direction: column
+        align-items: start  
+        height: 65px
+        justify-content: space-between
     &__additional
-      grid-row: 3
-      grid-column: 1
-    &__categories
       grid-row: 4
       grid-column: 1
-    &__legal
+    &__categories
       grid-row: 5
+      grid-column: 1
+      margin-top: -10px
+    &__legal
+      margin-top: -15px
+      grid-row: 3
       grid-column: 1
     &__contact
       &-details
         grid-row: 6
         grid-column: 1
         width: 300px
+        margin-top: 0
       &-form
         grid-row: 7
-        grid-column: 1                
+        grid-column: 1
+        width: 320px
+        position: relative
+    &__info
+      position: absolute
+      bottom: 70px    
+    &-disclaimer
+      display: flex
+      flex-direction: column                    
     &__disclaimer
+      margin-top: -25px
+      display: flex
+      font-size: 10px
+      display: flex
+      flex-direction: row
+      width: 300px
+      &-image
+        margin-left: 15px
       &-wrapper
         margin-right: 0
+        margin-left: -4px
+
