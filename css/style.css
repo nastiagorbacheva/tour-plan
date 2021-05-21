@@ -499,6 +499,15 @@ textarea::-moz-placeholder {
   color: #333333;
 }
 
+.message {
+  padding-top: 40px;
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+}
+
 .breadcrumb-list {
   list-style: none;
   display: -webkit-box;
@@ -2611,6 +2620,13 @@ textarea::-moz-placeholder {
   .user__name--light {
     margin-right: 10px;
     margin-bottom: 5px;
+  }
+}
+
+@media (max-height: 576px) {
+  .navbar-bottom--visible {
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 }
 /*# sourceMappingURL=style.css.map */

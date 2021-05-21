@@ -29,3 +29,4 @@ menuButton.addEventListener('click', function() {
   console.log("Клик по кнопке меню")
   document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom--visible");
 });
+
