@@ -177,6 +177,8 @@
       margin-top: 53px
       margin-left: -17px     
 @media (max-width: 768px)
+  body
+    padding-top: 78px
   .grid
     grid-template-rows: repeat(6, 235px)
     grid-template-columns: repeat(2, 320px)
@@ -191,8 +193,39 @@
     max-width: 576px
     width: 92%
   .navbar
-    &__search, &-menu, &__user
+    &__mobile
+      &_fixed
+        position: fixed
+        left: 0
+        top: 0
+        right: 0
+        z-index: 99
+    &__user, &__search
+      &_mobile
+        &_hidden
+          display: none
+        &_visible
+          display: flex
+    &__user
+      flex-direction: column
+      justify-content: center            
+    &-bottom
       display: none
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      top: 78px
+      padding-top: 30px
+      &--visible
+        display: block
+    &-menu
+      flex-direction: column
+      &__item
+        margin-bottom: 18px
+        &_mobile
+          &_visible
+            display: block
   .menu
     &-button
       display: flex
@@ -208,6 +241,15 @@
         width: 16px
         height: 1px
         background-color: $text-color
+  .user
+    &__name
+      &--light
+        color: $light
+        margin-left: 0
+        margin-top: 10px
+    &__avatar
+      &--menu
+        margin-left: 0          
   .stars
     flex-basis: auto
   .hotel
@@ -311,8 +353,19 @@
       margin-bottom: 20px 
   .logo
     width: 99px
-  .navbar-top
-    margin-top: -9px
+  .navbar
+    &__user
+      &-mobile
+        &_visible
+          margin-top: -6px
+    &-top
+      margin-top: 0
+    &__search
+      &_mobile
+        &_visible
+          width: 240px
+          margin-bottom: 17px
+
   .container
     margin-left: 20px
     margin-right: 20px
@@ -522,4 +575,15 @@
       &-wrapper
         margin-right: 0
         margin-left: -4px
-
+  .user
+    &_mobile
+      &_visible
+        margin-top: -6px
+    &__avatar
+      &--menu
+        margin-top: -20px
+        margin-right: 10px
+    &__name
+      &--light
+        margin-right: 10px
+        margin-bottom: 5px    
