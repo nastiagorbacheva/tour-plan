@@ -55,23 +55,23 @@
                   <ul class="navbar-menu">
                      <li class="navbar-menu__item navbar-menu__item_mobile_visible">
                         <a 
-                        href="#" 
-                        class="user navbar__user navbar__user_mobile_visible">
-               <img 
-               src="img/user-avatar.jpg" 
-               alt="avatar: Nathan" 
-               class="user__avatar user__avatar--menu">
-               <span class="user__name user__name--light ">Nathan</span>
-            </li>
+                           href="#" 
+                           class="user navbar__user navbar__user_mobile_visible">
+                           <img 
+                              src="img/user-avatar.jpg" 
+                              alt="avatar: Nathan" 
+                              class="user__avatar user__avatar--menu">
+                           <span class="user__name user__name--light ">Nathan</span>
+                     </li>
                      <li class="navbar-menu__item navbar-menu__item_mobile_visible">
-                        <form action="#" class="search navbar__search navbar__search_mobile_visible">
-                  <input type="text" class="search__input"
-                     placeholder="Search Location">
-                  <button class="search__button">
-                  <img src="img/search.svg" alt="Icon: search">
-                  </button>
-               </form>
-            </li>
+                     <form action="#" class="search navbar__search navbar__search_mobile_visible">
+                     <input type="text" class="search__input"
+                        placeholder="Search Location">
+                     <button class="search__button">
+                     <img src="img/search.svg" alt="Icon: search">
+                     </button>
+                     </form>
+                     </li>
                      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">All Deals</a></li>
                      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotels</a></li>
                      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Activities</a></li>
@@ -386,11 +386,11 @@
                <span class="newsletter-title__strong">Newsletter</span>
             </h2>
             <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
-               <input type="text" class="subscribe__input"
-                  placeholder="Your email address" name="email">
+               <input type="email" class="subscribe__input " placeholder="Your email address" name="email" required>
                <button class="subscribe__button">Send</button>
             </form>
          </div>
+         <div class="subscribe__error"></div>
          <!-- /.newsletter-wrapper -->
       </section>
       <section class="reviews">
@@ -595,12 +595,16 @@
                </div>
                <div class="footer__contact-form">
                   <h3 class="footer__title footer__title--mb">Send us a message</h3>
-                  <form action="send.php" method="POST" class="footer__form">
-                     <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-                     <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
+                  <form action="send.php" method="POST" class="footer__form form">
+                     <div class="footer__input-group">
+                        <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required>
+                     </div>
+                     <div class="footer__input-group">
+                        <input type="tel" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" class="input footer__input phone_with_ddd" placeholder="Phone Number*" name="phone" required>
+                     </div>
                      <textarea class="message footer__message"  cols="30" rows="10" placeholder="Message" name="message"></textarea>
                      <button class="button footer__button" type="submit">Send</button>
-                     <span class="footer__info">* Required Fields</span>
+                     <span class="footer__info">*Required Fields</span>
                   </form>
                </div>
             </div>
@@ -622,24 +626,26 @@
          <!-- /.modal__overlay -->
          <div class="modal__dialog">
             <a href="#" class="modal__close">
-               <img src="img/close.svg" alt="icon: close">
+            <img src="img/close.svg" alt="icon: close">
             </a>
-                          <div class="modal__contact-form">
-                  <h3 class="modal__title modal__title--mb">Booking</h3>
-                  <form action="send.php" method="POST" class="modal__form">
-                     <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
-                     <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone">
-                     <input type="text" class="input modal__input" placeholder="Email*" name="email">
-                     <textarea class="message modal__message"  cols="30" rows="10" placeholder="Message" name="message"></textarea>
-                     <button class="button modal__button" type="submit">Send</button>
-                     <span class="modal__info">* Required Fields</span>
-                  </form>
-               </div>
+            <div class="modal__contact-form">
+               <h3 class="modal__title modal__title--mb">Booking</h3>
+               <form action="send.php" method="POST" class="modal__form form">
+                  <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required>
+                  <input type="tel" class="input modal__input phone_with_ddd" placeholder="Phone Number*" name="phone" required>
+                  <input type="email" class="input modal__input" placeholder="Your Email*" name="email" required>
+                  <textarea class="message modal__message"  cols="30" rows="10" placeholder="Message" name="message"></textarea>
+                  <button class="button modal__button" type="submit">Send</button>
+                  <span class="modal__info">* Required Fields</span>
+               </form>
+            </div>
          </div>
          <!-- /.modal__dialog -->
       </div>
       <!-- /.modal -->
       <script src="js/jquery-3.6.0.min.js"></script>
+      <script src="js/jquery.mask.min.js"></script>
+      <script src="js/jquery.validate.min.js"></script>
       <script src="js/swiper-bundle.min.js"></script>
       <script src="js/main.js"></script>
    </body>

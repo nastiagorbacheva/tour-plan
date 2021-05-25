@@ -23,7 +23,8 @@
       margin-top: -20px
   .footer
     &__input
-      flex-basis: 100%                    
+      &-group
+        flex-basis: 100%                    
 @media (max-width: 992px)
   .stars
     margin-top: -5px
@@ -135,7 +136,8 @@
       grid-row-gap: 40px
       margin-top: -80px
     &__input
-      flex-basis: 48%
+      &-group
+        flex-basis: 48%
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
@@ -313,13 +315,21 @@
     height: 255px
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
   .modal
     &__dialog
       &--visible
         width: 100%
         padding-left: 5%
-        padding-right: 5%              
+        padding-right: 5% 
+  .subscribe
+    position: relative
+    &__error
+      position: absolute
+      color: red
+      bottom: 5.5%
+      left: 5.5% 
 @media (max-width: 576px )
   .grid
     grid-template-areas: "item-1" "item-1" "item-2" "item-2" "item-3" "item-3" "item-7" "item-7" "item-8" "item-8" "item-9" "item-9"

@@ -394,6 +394,11 @@ textarea::-moz-placeholder {
   background-color: #ec1f46;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.invalid {
+  color: red;
 }
 
 .navbar {
@@ -1295,7 +1300,6 @@ textarea::-moz-placeholder {
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
-  color: #333333;
 }
 
 .subscribe__button {
@@ -1310,6 +1314,14 @@ textarea::-moz-placeholder {
   font-size: 12px;
   background-color: #ec1f46;
   color: #fff;
+  cursor: pointer;
+}
+
+.subscribe__error {
+  position: absolute;
+  color: red;
+  bottom: 30.5%;
+  left: 50.5%;
 }
 
 .reviews {
@@ -1566,6 +1578,10 @@ textarea::-moz-placeholder {
   padding-bottom: 46px;
 }
 
+.footer__button {
+  cursor: pointer;
+}
+
 .footer__link-info {
   display: inline;
 }
@@ -1730,11 +1746,15 @@ textarea::-moz-placeholder {
 }
 
 .footer__input {
+  width: 100%;
   background-color: #fff;
   border-radius: 4px;
   border: none;
   padding: 0 23px;
   height: 50px;
+}
+
+.footer__input-group {
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
@@ -1878,7 +1898,7 @@ textarea::-moz-placeholder {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal .message {
@@ -1891,9 +1911,13 @@ textarea::-moz-placeholder {
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin-top: 15px;
   resize: none;
   height: 123px;
+}
+
+.modal__button {
+  margin-top: 15px;
 }
 
 .modal__info {
@@ -1956,7 +1980,7 @@ textarea::-moz-placeholder {
   .item-box {
     margin-top: -20px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -2113,7 +2137,7 @@ textarea::-moz-placeholder {
     grid-row-gap: 40px;
     margin-top: -80px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
   }
@@ -2371,7 +2395,7 @@ textarea::-moz-placeholder {
     width: 49%;
     height: 255px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -2379,6 +2403,15 @@ textarea::-moz-placeholder {
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
+  }
+  .subscribe {
+    position: relative;
+  }
+  .subscribe__error {
+    position: absolute;
+    color: red;
+    bottom: 5.5%;
+    left: 5.5%;
   }
 }
 

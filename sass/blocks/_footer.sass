@@ -3,6 +3,8 @@
   color: $light
   padding-top: 108px
   padding-bottom: 46px
+  &__button
+    cursor: pointer
   &__link-info
     display: inline
   &__legal
@@ -89,14 +91,16 @@
       text-decoration: none
       color: $footer-text-color
   &__input
+    width: 100%
     background-color: #fff
     border-radius: 4px
     border: none
     padding: 0 23px
     height: 50px
-    margin-bottom: 15px
-    flex-basis: 48%
-    color: $footer-text-color
+    &-group
+      margin-bottom: 15px
+      flex-basis: 48%
+      color: $footer-text-color
   &__message
     background-color: #fff
     height: 123px
