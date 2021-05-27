@@ -17,12 +17,29 @@
             });
          }
       </script>
+      <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+      <link rel="manifest" href="img/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
       <link rel="stylesheet" href="css/swiper-bundle.min.css">
       <link rel="stylesheet" href="./css/style.css">
       <link rel="stylesheet" href="css/aos.css">
    </head>
    <body>
-      <header class="navbar navbar__mobile_fixed">
+      <header class="navbar navbar-mobile-fixed">
          <div class="container">
             <div class="navbar-top">
                <a href="#" class="logo">
@@ -37,7 +54,7 @@
                </form>
                <a href="#" class="user navbar__user navbar__user_mobile_hidden">
                <img src="img/user-avatar.jpg" alt="avatar: Nathan" class="user__avatar">
-               <span class="user__name">Nathan</span>
+               <span class="user-name">Nathan</span>
                </a>
                <!-- /.user -->
                <button class="menu-button navbar-top__menu-button">
@@ -57,7 +74,7 @@
                      <li class="navbar-menu__item navbar-menu__item_mobile_visible">
                         <a href="#" class="user navbar__user navbar__user_mobile_visible">
                            <img src="img/user-avatar.jpg" alt="avatar: Nathan" class="user__avatar user__avatar--menu"></a>
-                           <span class="user__name user__name--light ">Nathan</span>
+                           <span class="user-name user-name--light ">Nathan</span>
                      </li>
                      <li class="navbar-menu__item navbar-menu__item_mobile_visible">
                      <form action="#" class="search navbar__search navbar__search_mobile_visible">
@@ -102,7 +119,7 @@
                </div>
                <p class="message-hotel">We appreciate you contacting us. One of our colleagues will get back in touch with you soon! Have a great day!</p>
                <div>
-                  <button onclick= "document.location= 'index.html'" class="button return__button" type="submit">Return to home page</button>
+                  <button onclick= "document.location= 'index.html'" class="button thankyou__button" type="submit">Return to home page</button>
                </div>
             </div>
          </div>
@@ -186,10 +203,10 @@
                   <h3 class="footer__title footer__title--mb">Send us a message</h3>
                   <form action="send.php" method="POST" class="footer__form">
                      <div class="footer__input-group">
-                        <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required data-min="2" data-max="3">
+                        <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required minlength="2">
                      </div>
                      <div class="footer__input-group">
-                        <input type="tel" class="input footer__input phone_with_ddd" placeholder="Phone Number*" name="phone" required minlength="18">
+                        <input type="tel" class="input footer__input footer__input--phone" placeholder="Phone Number*" name="phone" required minlength="18">
                      </div>
                      <textarea class="message footer__message"  cols="30" rows="10" placeholder="Message" name="message"></textarea>
                      <button class="button footer__button" type="submit">Send</button>

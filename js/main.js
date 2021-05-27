@@ -31,7 +31,7 @@ $(document).ready(function () {
 
   cardButton.on("click", openModal);
 
-  var itemButton = $(".item__button");
+  var itemButton = $(".item-button");
   cardButton.on('click', function () {
     $(".navbar-bottom")
       .toggleClass("navbar-bottom--visible");
@@ -39,7 +39,7 @@ $(document).ready(function () {
 
   itemButton.on("click", openModal);
 
-  var itemButtonFirst = $(".item__button--first");
+  var itemButtonFirst = $(".item-button--first");
   cardButton.on('click', function () {
     $(".navbar-bottom")
       .toggleClass("navbar-bottom--visible");
@@ -96,7 +96,7 @@ $(document).ready(function () {
   });
 
   $(".newsletter__subscribe").validate({
-    errorLabelContainer: ".subscribe__error",
+    errorLabelContainer: ".newsletter__error",
     messages: {
       email: {
         required: "We need your email address to contact you",
@@ -105,7 +105,10 @@ $(document).ready(function () {
   })
 
   $(document).ready(function () {
-    $('.phone_with_ddd').mask("+7 (999) 99-99-999");
+    $('.footer__input--form').mask("+7 (999) 99-99-999");
+  })
+  $(document).ready(function () {
+    $('.modal__input--form').mask("+7 (999) 99-99-999");
   })
 
   $(".footer__form").validate({
@@ -122,5 +125,18 @@ $(document).ready(function () {
     }
     
   });
+
+if (window.innerWidth < 992) {
+
+  function removeAos() {
+    var elem = document.getElementById('aos-css-file');
+    elem.parentNode.removeChild(elem);
+    return false;
+  }
+  removeAos();
+
+}
+
 AOS.init();
+
 })

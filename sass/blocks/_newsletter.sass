@@ -3,7 +3,7 @@
   position: relative
   padding: 98px 0 87px 0
   height: 260px
-  background-image: url(../img/newsletter_bg.jpg)
+  background-image: url(../img/newsletter-bg.jpg)
   background-repeat: no-repeat
   background-size: cover
   &:before
@@ -34,7 +34,12 @@
       display: block
       font-size: 36px
       line-height: 45px
-      text-transform: uppercase         
+      text-transform: uppercase
+  &__error
+    position: absolute
+    color: red
+    bottom: 30.5%
+    left: 50.5% 
 .subscribe
   position: relative
   width: 355px
@@ -65,9 +70,5 @@
     background-color: $primary
     color: $light
     cursor: pointer  
-  &__error
-    position: absolute
-    color: red
-    bottom: 30.5%
-    left: 50.5% 
+
     

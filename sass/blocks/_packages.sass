@@ -15,79 +15,88 @@
     color: $light
     border-radius: 8px
     position: relative    
-    &__1 
+    &--1 
       grid-area: item-1
       display: flex
       flex-direction: row
       position: relative
-    &__2 
+    &--2 
       grid-area: item-2 
-    &__3
+    &--3
       grid-area: item-3
-    &__4
+    &--4
       grid-area: item-4
       display: none 
-    &__5
+    &--5
       grid-area: item-5
       display: none
-    &__6 
+    &--6 
       grid-area: item-6
       display: none
-    &__7 
+    &--7 
       grid-area: item-7
-    &__8 
+    &--8 
       grid-area: item-8
-    &__9 
+    &--9 
       grid-area: item-9
-    &__10 
+    &--10 
       grid-area: item-10
       display: none
-    &__11 
+    &--11 
       grid-area: item-11
       display: none
-    &__12 
+    &--12 
       grid-area: item-12
       display: none
-.flash__offer
-  background-color: $primary
-  position: absolute
-  top: 30px
-  left: 0
-  padding-top: 3px
-  color: $light
-  width: 60px
-  height: 18px    
-  font-style: normal
-  font-weight: 600
-  font-size: 8px
-  line-height: 10px
-  text-align: center
-  border-radius: 0 2px 2px 0   
-  &--first
+  &__flash
     background-color: $primary
     position: absolute
     top: 30px
     left: 0
-    padding-top: 6px
+    padding-top: 3px
     color: $light
-    width: 95px
-    height: 30px    
+    width: 60px
+    height: 18px    
     font-style: normal
     font-weight: 600
-    font-size: 12px
-    line-height: 15px
+    font-size: 8px
+    line-height: 10px
     text-align: center
-    border-radius: 0 4px 4px 0       
+    border-radius: 0 2px 2px 0   
+    &--first
+      background-color: $primary
+      position: absolute
+      top: 30px
+      left: 0
+      padding-top: 6px
+      color: $light
+      width: 95px
+      height: 30px    
+      font-style: normal
+      font-weight: 600
+      font-size: 12px
+      line-height: 15px
+      text-align: center
+      border-radius: 0 4px 4px 0
+  &-image
+    width: 350px
+    height: 250px
+    border-radius: 8px 8px 0 0
+    &--first
+      height: 100%
+      width: 200%
+      border-radius: 8px 0 0 8px
 .item
+  max-width: 364px
+  padding: 0 20px 21px 44px
   &-stars
-    &__picture
-      margin-left: -2px
-  &__general
+    margin-left: -2px
+  &-general
     display: flex
     flex-direction: row
     justify-content: space-between
     margin-top: 54px
-  &__price
+  &-price
     display: flex
     flex-direction: column
     display: block
@@ -99,7 +108,7 @@
     display: block
     margin-top: -10px
 
-  &__pricetag
+  &-pricetag
     font-style: normal
     font-weight: bold
     font-size: 24px
@@ -109,7 +118,7 @@
       font-weight: bold
       font-size: 24px
       line-height: 30px
-  &__discount
+  &-discount
       font-style: normal
       font-weight: normal
       font-size: 14px
@@ -126,8 +135,6 @@
         display: block
         margin-top: -15px
         padding-bottom: 5px
-
-
   &-wrapper
     width: 203px
     height: 67px
@@ -141,7 +148,7 @@
     margin-top: 22px
     &--1
       margin-top: 45px
-  &__button
+  &-button
     height: 40px
     width: 120px
     background-color: $primary
@@ -173,9 +180,6 @@
       margin-right: 0
   &-box
     padding: 30px 30px 20px 30px
-    &--first
-      max-width: 364px
-      padding: 0 20px 21px 44px
   &__rating
     margin-top: 40px
   &__text
@@ -183,22 +187,14 @@
     font-weight: normal
     font-size: 14px
     line-height: 22px   
-  &-image--first
-    height: 100%
-    width: 200%
-    border-radius: 8px 0 0 8px
-  &-image--others
-    width: 350px
-    height: 250px
-    border-radius: 8px 8px 0 0
-  &__header
+  &-header
     margin-top: 0
-    &--first
-      font-style: bold
-      font-size: 18px
-      line-height: 23px
-      margin-top: 4px
-      margin-bottom: 25px
+  &__header
+    font-style: bold
+    font-size: 18px
+    line-height: 23px
+    margin-top: 4px
+    margin-bottom: 25px
 .packages
   &__header
     font-size: 36px
