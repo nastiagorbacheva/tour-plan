@@ -1,9 +1,8 @@
 $(document).ready(function () {
   const hotelSlider = new Swiper('.hotel-slider', {
-    // Optional parameters
+
     loop: true,
 
-    // Navigation arrows
     navigation: {
       nextEl: '.hotel-slider__button--next',
       prevEl: '.hotel-slider__button--prev',
@@ -15,10 +14,9 @@ $(document).ready(function () {
   });
 
   const reviewSlider = new Swiper('.reviews-slider', {
-    // Optional parameters
+
     loop: true,
 
-    // Navigation arrows
     navigation: {
       nextEl: '.reviews-slider__button--next',
       prevEl: '.reviews-slider__button--prev',
@@ -32,7 +30,6 @@ $(document).ready(function () {
   });
 
   cardButton.on("click", openModal);
-
 
   var itemButton = $(".item__button");
   cardButton.on('click', function () {
@@ -50,13 +47,11 @@ $(document).ready(function () {
 
   itemButtonFirst.on("click", openModal);
 
-
   var menuButton = $(".menu-button");
   menuButton.on('click', function () {
     $(".navbar-bottom")
       .toggleClass("navbar-bottom--visible");
   });
-
 
   var modalButton = $("[data-toggle=modal]");
   var closeModalButton = $(".modal__close");
@@ -80,7 +75,7 @@ $(document).ready(function () {
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
   }
-  // обработка форм
+
   $(".form").each(function () {
     $(this).validate({
       errorClass: "invalid invalid__newsletter",
@@ -100,7 +95,6 @@ $(document).ready(function () {
     });
   });
 
-
   $(".newsletter__subscribe").validate({
     errorLabelContainer: ".subscribe__error",
     messages: {
@@ -113,7 +107,6 @@ $(document).ready(function () {
   $(document).ready(function () {
     $('.phone_with_ddd').mask("+7 (999) 99-99-999");
   })
-
 
   $(".footer__form").validate({
     errorClass: "invalid__footer",
@@ -129,15 +122,5 @@ $(document).ready(function () {
     }
     
   });
-
-//   $(".footer__form").validate({
-//     errorLabelContainer: ".error-1",
-//     messages: {
-//       name: {
-//         required: "Please specify your name",
-//         minlength: "Your name must contain at least 2 characters",
-//       }
-//     },
-// })
 AOS.init();
 })
