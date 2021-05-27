@@ -25,7 +25,7 @@ $(document).ready(function () {
     }
   });
 
-var cardButton = $(".card__button");
+  var cardButton = $(".card__button");
   cardButton.on('click', function () {
     $(".navbar-bottom")
       .toggleClass("navbar-bottom--visible");
@@ -33,12 +33,29 @@ var cardButton = $(".card__button");
 
   cardButton.on("click", openModal);
 
+
+  var itemButton = $(".item__button");
+  cardButton.on('click', function () {
+    $(".navbar-bottom")
+      .toggleClass("navbar-bottom--visible");
+  });
+
+  itemButton.on("click", openModal);
+
+  var itemButtonFirst = $(".item__button--first");
+  cardButton.on('click', function () {
+    $(".navbar-bottom")
+      .toggleClass("navbar-bottom--visible");
+  });
+
+  itemButtonFirst.on("click", openModal);
+
+
   var menuButton = $(".menu-button");
   menuButton.on('click', function () {
     $(".navbar-bottom")
       .toggleClass("navbar-bottom--visible");
   });
-
 
 
   var modalButton = $("[data-toggle=modal]");
@@ -70,17 +87,20 @@ var cardButton = $(".card__button");
       messages: {
         name: {
           required: "Please specify your name",
-          minlength: "Имя должно быть не короче 2 букв"
+          minlength: "Your name must contain at least 2 characters"
         },
         email: {
           required: "We need your email address to contact you",
         },
         phone: {
           required: "Please enter your phone number",
+          minlength: "Must contain at least 10 numbers"
         },
       },
     });
   });
+
+
   $(".newsletter__subscribe").validate({
     errorLabelContainer: ".subscribe__error",
     messages: {
@@ -89,7 +109,35 @@ var cardButton = $(".card__button");
       },
     }
   })
-})
-$(document).ready(function () {
-  $('.phone_with_ddd').mask("+7 (999) 99-99-999");
+
+  $(document).ready(function () {
+    $('.phone_with_ddd').mask("+7 (999) 99-99-999");
+  })
+
+
+  $(".footer__form").validate({
+    errorClass: "invalid__footer",
+    messages: {
+      name: {
+        required: "Please specify your name",
+        minlength: "Must contain at least 2 characters",
+      },
+      phone: {
+        required: "Please enter your phone number",
+        minlength: "Must contain at least 10 numbers"
+      },
+    }
+    
+  });
+
+//   $(".footer__form").validate({
+//     errorLabelContainer: ".error-1",
+//     messages: {
+//       name: {
+//         required: "Please specify your name",
+//         minlength: "Your name must contain at least 2 characters",
+//       }
+//     },
+// })
+AOS.init();
 })

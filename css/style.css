@@ -380,6 +380,24 @@ textarea::-moz-placeholder {
   border: none;
   padding: 0 23px;
   height: 50px;
+  position: relative;
+}
+
+.invalid {
+  color: red;
+  font-size: 12px;
+}
+
+#email-error {
+  margin-bottom: -15px;
+}
+
+#phone-error {
+  margin-bottom: -15px;
+}
+
+#name-error {
+  margin-bottom: -15px;
 }
 
 .button {
@@ -395,10 +413,6 @@ textarea::-moz-placeholder {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.invalid {
-  color: red;
 }
 
 .navbar {
@@ -1752,13 +1766,13 @@ textarea::-moz-placeholder {
   border: none;
   padding: 0 23px;
   height: 50px;
+  margin-bottom: 15px;
 }
 
 .footer__input-group {
-  margin-bottom: 15px;
+  position: relative;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
-  color: #BDBDBD;
 }
 
 .footer__message {
@@ -1771,6 +1785,14 @@ textarea::-moz-placeholder {
       flex-basis: 100%;
   margin-bottom: 23px;
   resize: none;
+}
+
+.footer__message-group {
+  margin-bottom: 15px;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  color: #BDBDBD;
+  position: relative;
 }
 
 .footer__info {
@@ -1835,6 +1857,15 @@ textarea::-moz-placeholder {
           justify-content: space-between;
 }
 
+label.invalid__footer {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  top: 50px;
+  right: 15%;
+  width: 200px;
+}
+
 .modal__overlay {
   position: fixed;
   left: 0;
@@ -1870,11 +1901,21 @@ textarea::-moz-placeholder {
   opacity: 0;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  -webkit-animation-name: open_modal;
+          animation-name: open_modal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 .modal__dialog--visible {
   visibility: visible;
   opacity: 1;
+  -webkit-animation-name: open_modal;
+          animation-name: open_modal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .modal__close {
@@ -1948,6 +1989,24 @@ textarea::-moz-placeholder {
   overflow-x: hidden;
 }
 
+@-webkit-keyframes open_modal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes open_modal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -1983,6 +2042,14 @@ textarea::-moz-placeholder {
   .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+  label.invalid__footer {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 50px;
+    right: 55%;
+    width: 200px;
   }
 }
 
@@ -2198,6 +2265,14 @@ textarea::-moz-placeholder {
     margin-top: 53px;
     margin-left: -17px;
   }
+  label.invalid__footer {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 50px;
+    right: 20%;
+    width: 200px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2412,6 +2487,14 @@ textarea::-moz-placeholder {
     color: red;
     bottom: 5.5%;
     left: 5.5%;
+  }
+  label.invalid__footer {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 50px;
+    right: 50%;
+    width: 200px;
   }
 }
 
@@ -2799,6 +2882,14 @@ textarea::-moz-placeholder {
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
+  }
+  label.invalid__footer {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 50px;
+    left: 3%;
+    width: 200px;
   }
 }
 

@@ -19,13 +19,14 @@
       </script>
       <link rel="stylesheet" href="css/swiper-bundle.min.css">
       <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="css/aos.css">
    </head>
    <body>
       <header class="navbar navbar__mobile_fixed">
          <div class="container">
             <div class="navbar-top">
                <a href="#" class="logo">
-               <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image">
+               <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image" data-aos="zoom-out" data-aos-duration="1500">
                </a>
                <form action="#" class="search navbar__search navbar__search_mobile_hidden">
                   <input type="text" class="search__input"
@@ -54,12 +55,12 @@
                <nav>
                   <ul class="navbar-menu">
                      <li class="navbar-menu__item navbar-menu__item_mobile_visible">
-                        <a 
-                        href="#" 
+                        <a
+                        href="#"
                         class="user navbar__user navbar__user_mobile_visible">
-               <img 
-               src="img/user-avatar.jpg" 
-               alt="avatar: Nathan" 
+               <img
+               src="img/user-avatar.jpg"
+               alt="avatar: Nathan"
                class="user__avatar user__avatar--menu">
                <span class="user__name user__name--light ">Nathan</span>
             </li>
@@ -101,14 +102,14 @@
       <section class="hotel">
          <div class="container">
             <div class="thankyou">
-            
+
                   <div class="hotel-wrapper">
-                     
+
                      <h2 class="hotel-name hotel-info__name">Thank you for getting in touch! </h2>
-                     
+
                   </div>
                   <p class="message-hotel">We appreciate you contacting us. One of our colleagues will get back in touch with you soon! Have a great day!</p>
-               
+
                <div>
                <button onclick= "document.location= 'index.html'" class="button return__button" type="submit">Return to home page</button>
                </div>
@@ -123,7 +124,7 @@
       <footer class="footer">
          <div class="container">
             <div class="footer-wrapper">
-               <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo">
+               <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo" data-aos="zoom-out" data-aos-duration="1500">
                <div class="footer__list footer__categories">
                   <h3 class="footer__title footer__title--1">ALL CATEGORIES</h3>
                   <ul class="footer__ul footer__ul--1">
@@ -196,12 +197,22 @@
                <div class="footer__contact-form">
                   <h3 class="footer__title footer__title--mb">Send us a message</h3>
                   <form action="send.php" method="POST" class="footer__form">
-                     <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-                     <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
-                     <textarea class="footer__message"  cols="30" rows="10" placeholder="Message" name="message"></textarea>
-                     <button class="button footer__button" type="submit">Send</button>
-                     <span class="footer__info">* Required Fields</span>
-                  </form>
+                                       <div class="footer__input-group">
+                                          <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required data-min="2" data-max="3">
+
+                                       </div>
+
+                                       <div class="footer__input-group">
+                                          <input type="tel" class="input footer__input phone_with_ddd" placeholder="Phone Number*" name="phone" required minlength="18">
+
+                                       </div>
+
+                                      <textarea class="message footer__message"  cols="30" rows="10" placeholder="Message" name="message"></textarea>
+
+
+                                       <button class="button footer__button" type="submit">Send</button>
+                                       <span class="footer__info">*Required Fields</span>
+                                    </form>
                </div>
             </div>
             <!-- /.footer-wrapper -->
@@ -217,6 +228,10 @@
             </div>
          </div>
       </footer>
+      <script src="js/jquery-3.6.0.min.js"></script>
+      <script src="js/jquery.mask.min.js"></script>
+      <script src="js/jquery.validate.min.js"></script>
+      <script src="js/aos.js"></script>
       <script src="js/swiper-bundle.min.js"></script>
       <script src="js/main.js"></script>
    </body>

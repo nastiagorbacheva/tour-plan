@@ -26,10 +26,16 @@
     z-index: 101
     visibility: hidden
     opacity: 0
-    transition: opacity 0.2s    
+    transition: opacity 0.2s
+    animation-name: open_modal
+    animation-fill-mode: forwards
+    animation-duration: 4s
     &--visible
       visibility: visible
       opacity: 1
+      animation-name: open_modal
+      animation-fill-mode: forwards
+
   &__close
     position: absolute 
     right: 18px
@@ -76,5 +82,10 @@
     cursor: pointer
     overflow: auto
     overflow-x: hidden  
+@keyframes open_modal
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 
 
