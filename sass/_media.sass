@@ -11,8 +11,8 @@
   .grid
     grid-template-rows: repeat(4, 250px)
     grid-template-columns: minmax(350px, 350px)
-    row-gap: 2px
-    column-gap: 2px
+    row-gap: 7px
+    column-gap: 7px
   .packages
     margin-left: 20px
   .card
@@ -273,7 +273,7 @@
     background-color: $primary
 
 
-@media (max-width: 768px)
+@media (max-width: 767px)
   body
     padding-top: 78px
   .grid
@@ -433,6 +433,7 @@
       top: 50px
       left: 3%
       width: 200px
+      
 @media (max-width: 576px )
   .grid
     grid-template-areas: "item-2" "item-2" "item-3" "item-3" "item-7" "item-7" "item-8" "item-8" "item-9" "item-9"
@@ -536,6 +537,8 @@
       font-size: 20px
   .subscribe
     max-width: 280px
+    &__input
+      padding-left: 20px
   .reviews
     &__title
       font-size: 18px
@@ -750,17 +753,38 @@
   .modal
     &__dialog
       &--visible
-        width: 100%
-        padding-left: 5%
-        padding-right: 5%
+        width: 95%
   label.invalid
     &__footer
       color: red
       font-size: 12px
       position: absolute
-      top: 50px
+      top: 45px
       left: 3%
       width: 200px
+  .hotel
+    &-slider
+      &__button
+        height: 7px
+        width: 7px
+        &--prev
+          left: 4px
+          top: 50%
+        &--next
+          right: 8px
+          top: 50%
+  .reviews-slider__text
+    text-align: left
+  .grid
+    &-image
+      padding-left: 50px
+      padding-right: 50px
+      padding-top: 20px
+      width: 500px
+    &__flash
+      top: 30px
+      left: 50px
+
 @media (max-height: 576px )
   .navbar
     &-bottom
@@ -775,4 +799,4 @@
         height: 100%
         overflow-y: auto
         overflow-x: hidden
-         
+
