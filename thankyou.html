@@ -7,16 +7,8 @@
       <title>Best Tour Plan - Hotel Booking</title>
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
-      <script src="https://api-maps.yandex.ru/2.1/?apikey=d380664d-5548-4cf0-a83d-4e6b6f8724b1&lang=ru_RU"></script>
-      <script>
-         ymaps.ready(init);
-         function init(){
-            var myMap = new ymaps.Map("map", {
-               center: [7.89067469974694, 98.29470384302199],
-               zoom: 17
-            });
-         }
-      </script>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" rel="stylesheet">
       <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
       <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
@@ -36,14 +28,14 @@
       <meta name="theme-color" content="#ffffff">
       <link rel="stylesheet" href="css/swiper-bundle.min.css">
       <link rel="stylesheet" href="./css/style.css">
-      <link rel="stylesheet" href="css/aos.css">
+      <link id="aos-css-file" rel="stylesheet" href="css/aos.css">
    </head>
    <body>
       <header class="navbar navbar-mobile-fixed">
          <div class="container">
             <div class="navbar-top">
                <a href="#" class="logo">
-               <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image" data-aos="zoom-out" data-aos-duration="1500">
+               <img src="img/horizontal-logo.svg" onclick= "document.location= 'index.html'" alt="Logo: Best Tour Plan" class="logo__image" data-aos="zoom-out" data-aos-duration="1000">
                </a>
                <form action="#" class="search navbar__search navbar__search_mobile_hidden">
                   <input type="text" class="search__input"
@@ -53,8 +45,8 @@
                   </button>
                </form>
                <a href="#" class="user navbar__user navbar__user_mobile_hidden">
-               <img src="img/user-avatar.jpg" alt="avatar: Nathan" class="user__avatar">
-               <span class="user-name">Nathan</span>
+               <img src="img/user-avatar.jpg" alt="avatar: Nathan" class="user-avatar user__avatar">
+               <span class="user-name user-name--hover">Nathan</span>
                </a>
                <!-- /.user -->
                <button class="menu-button navbar-top__menu-button">
@@ -73,7 +65,7 @@
                   <ul class="navbar-menu">
                      <li class="navbar-menu__item navbar-menu__item_mobile_visible">
                         <a href="#" class="user navbar__user navbar__user_mobile_visible">
-                           <img src="img/user-avatar.jpg" alt="avatar: Nathan" class="user__avatar user__avatar--menu"></a>
+                           <img src="img/user-avatar.jpg" alt="avatar: Nathan" class="user__avatar user-avatar user__avatar--menu"></a>
                            <span class="user-name user-name--light ">Nathan</span>
                      </li>
                      <li class="navbar-menu__item navbar-menu__item_mobile_visible">
@@ -85,13 +77,13 @@
                      </button>
                      </form>
                      </li>
-                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">All Deals</a></li>
-                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotels</a></li>
-                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Activities</a></li>
-                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotel Day Packages</a></li>
-                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Restaurants</a></li>
-                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Events</a></li>
-                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Rodrigues</a></li>
+                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link navbar-menu__link--hover">All Deals</a></li>
+                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link navbar-menu__link--hover">Hotels</a></li>
+                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link navbar-menu__link--hover">Activities</a></li>
+                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link navbar-menu__link--hover">Hotel Day Packages</a></li>
+                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link navbar-menu__link--hover">Restaurants</a></li>
+                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link navbar-menu__link--hover">Events</a></li>
+                     <li class="navbar-menu__item"><a href="#" class="navbar-menu__link navbar-menu__link--hover">Rodrigues</a></li>
                   </ul>
                </nav>
             </div>
@@ -115,7 +107,7 @@
          <div class="container">
             <div class="thankyou">
                <div class="hotel-wrapper">
-                  <h2 class="hotel-name hotel-info__name">Thank you for getting in touch! </h2>
+                  <h1 class="hotel-name">Thank you for getting in touch! </h1>
                </div>
                <p class="message-hotel">We appreciate you contacting us. One of our colleagues will get back in touch with you soon! Have a great day!</p>
                <div>
@@ -129,29 +121,29 @@
       <footer class="footer">
          <div class="container">
             <div class="footer-wrapper">
-               <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo" data-aos="zoom-out" data-aos-duration="1500">
+               <a href="index.html" class="logo footer__logo"><img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo" data-aos="zoom-out" data-aos-duration="1000"></a>
                <div class="footer__list footer__categories">
-                  <h3 class="footer__title footer__title--1">ALL CATEGORIES</h3>
+                  <h2 class="footer__title footer__title--1">ALL CATEGORIES</h2>
                   <ul class="footer__ul footer__ul--1">
-                     <li class="footer__item"><a href="" class="footer__link">All Deals</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">Hotels</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">Activities</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">Spa Packages</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">Hotel Day Packages</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">Restaurants</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">Fitness</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">Rodrigues</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">All Deals</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">Hotels</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">Activities</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">Spa Packages</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">Hotel Day Packages</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">Restaurants</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">Fitness</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">Rodrigues</a></li>
                   </ul>
                </div>
                <div class="footer__list footer-additional">
                   <h3 class="footer__title footer__title--2">ADDITIONAL INFORMATION</h3>
                   <ul class="footer__ul footer__ul--2">
-                     <li class="footer__item"><a href="" class="footer__link">About Us</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">Contact Us</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">How does it work?</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">Frequently Asked Questions</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">Deals.mu loyalty program</a></li>
-                     <li class="footer__item"><a href="" class="footer__link">Promote your Business on BTP</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">About Us</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">Contact Us</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">How does it work?</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">Frequently Asked Questions</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">Deals.mu loyalty program</a></li>
+                     <li class="footer__item"><a href="" class="footer__link footer__link--hover">Promote your Business on BTP</a></li>
                   </ul>
                </div>
                <!-- /.footer-list -->
@@ -160,19 +152,19 @@
                      <h3 class="footer__title footer__title--inline">Social Network</h3>
                   </div>
                   <div class="footer__social-links">
-                     <a class="footer__link" href="#"><img src="img/facebook.svg" alt="icon: facebook"></a>
-                     <a class="footer__link" href="#"><img src="img/youtube.svg" alt="icon: youtube"></a>
-                     <a class="footer__link" href="#"><img src="img/instagram.svg" alt="icon: instagram"></a>
+                     <a class="footer__link" href="https://www.facebook.com/"><img src="img/facebook.svg" class="footer__pic" alt="icon: facebook"></a>
+                     <a class="footer__link" href="https://www.youtube.com/"><img src="img/youtube.svg" class="footer__pic" alt="icon: youtube"></a>
+                     <a class="footer__link" href="https://www.instagram.com/"><img src="img/instagram.svg" class="footer__pic" alt="icon: instagram"></a>
                   </div>
                </div>
                <!-- /.footer__social-network -->
                <div class="footer-list footer__legal">
                   <h3 class="footer__title footer__title--3">LEGAL INFORMATION</h3>
                   <ul class="footer__ul footer__ul--3">
-                     <li class="footer__item"><a href="#" class="footer__link">Terms & Conditions</a></li>
-                     <li class="footer__item"><a href="#" class="footer__link">Disclaimer</a></li>
-                     <li class="footer__item"><a href="#" class="footer__link">Cancellation policy</a></li>
-                     <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+                     <li class="footer__item"><a href="#" class="footer__link footer__link--hover">Terms & Conditions</a></li>
+                     <li class="footer__item"><a href="#" class="footer__link footer__link--hover">Disclaimer</a></li>
+                     <li class="footer__item"><a href="#" class="footer__link footer__link--hover">Cancellation policy</a></li>
+                     <li class="footer__item"><a href="#" class="footer__link footer__link--hover">Privacy</a></li>
                   </ul>
                </div>
                <div class="footer__contact-details">
@@ -188,9 +180,9 @@
                      <li class="footer__item footer__item--mb-2">
                         <div class="footer__icon-wrapper"><img class="footer__icon footer__icon--2" src="img/phone-call.svg" alt="icon: phone-call"></div>
                         <div>
-                           <div class="footer__part footer__part--1">Tel (business hours):<a class="footer__link-info" href="tel:2691500" > 269 1500</a></div>
-                           <div class="footer__part footer__part--2">Tel (hotline) Monday - Saturday: <a class="footer__link-info" href="tel:52566138"> 52-56-61-38</a> (08:00 am – 20:00 pm)</div>
-                           <div class="footer__part footer__part--3">Tel (hotline) Sunday: <a class="footer__link-info" href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 14:00 pm)</div>
+                           <div class="footer__part footer__part--1">Tel (business hours):<a class="footer__link-info footer__link-info--hover" href="tel:2691500" > 269 1500</a></div>
+                           <div class="footer__part footer__part--2">Tel (hotline) Monday - Saturday: <a class="footer__link-info footer__link-info--hover" href="tel:52566138"> 52-56-61-38</a> (08:00 am – 20:00 pm)</div>
+                           <div class="footer__part footer__part--3">Tel (hotline) Sunday: <a class="footer__link-info footer__link-info--hover" href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 14:00 pm)</div>
                         </div>
                      </li>
                      <li class="footer__item footer__item--mb-2">
@@ -230,8 +222,8 @@
       <script src="js/jquery-3.6.0.min.js"></script>
       <script src="js/jquery.mask.min.js"></script>
       <script src="js/jquery.validate.min.js"></script>
-      <script src="js/aos.js"></script>
       <script src="js/swiper-bundle.min.js"></script>
+      <script src="js/aos.js"></script>
       <script src="js/main.js"></script>
    </body>
 </html>

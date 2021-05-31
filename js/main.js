@@ -105,10 +105,10 @@ $(document).ready(function () {
   })
 
   $(document).ready(function () {
-    $('.footer__input--form').mask("+7 (999) 99-99-999");
+    $('.footer__input--phone').mask("+7 (999) 99-99-999");
   })
   $(document).ready(function () {
-    $('.modal__input--form').mask("+7 (999) 99-99-999");
+    $('.modal__input--phone').mask("+7 (999) 99-99-999");
   })
 
   $(".footer__form").validate({
@@ -137,6 +137,20 @@ if (window.innerWidth < 992) {
 
 }
 
-AOS.init();
+  AOS.init();
+  
+  if (window.innerWidth < 992) {
+  var footerLink = $(".footer__link");  
+    footerLink.removeClass("footer__link--hover");
+  var navbarLink = $(".navbar-menu__link");  
+    navbarLink.removeClass("navbar-menu__link--hover");
+  var userAvatar = $(".user__avatar");  
+    userAvatar.removeClass("user-avatar");
+  var userName = $(".user-name");  
+    userName.removeClass("user-name--hover");
+  var fotLink = $(".footer__link-info");  
+    fotLink.removeClass("footer__link--hover");
+    fotLink.removeClass("footer__link-info--hover");
+}
 
 })
